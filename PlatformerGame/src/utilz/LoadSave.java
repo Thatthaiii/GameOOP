@@ -81,9 +81,6 @@ public class LoadSave {
 					filesSorted[i] = files[j];
 				
 			}
-		
-
-		
 		BufferedImage[] imgs = new BufferedImage[filesSorted.length];
 		
 		for(int i =0; i < imgs.length ; i++) {
@@ -93,8 +90,6 @@ public class LoadSave {
 				e.printStackTrace();
 			}
 		}
-		
-		
 		return imgs;
 	}
 	

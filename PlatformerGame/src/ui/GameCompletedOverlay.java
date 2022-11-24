@@ -24,7 +24,7 @@ public class GameCompletedOverlay {
 
 	private void createButtons() {
 		quit = new MenuButton(Game.GAME_WIDTH / 2, (int) (270 * Game.SCALE), 2, GameState.MENU);
-//		credit = new MenuButton(Game.GAME_WIDTH / 2, (int) (200 * Game.SCALE), 3, Gamestate.CREDITS);
+
 	}
 
 	private void createImg() {
@@ -42,7 +42,7 @@ public class GameCompletedOverlay {
 
 		g.drawImage(img, imgX, imgY, imgW, imgH, null);
 
-		credit.draw(g);
+		
 		quit.draw(g);
 	}
 
@@ -77,11 +77,11 @@ public class GameCompletedOverlay {
 			if (credit.isMousePressed()) {
 				playing.resetAll();
 				playing.resetGameCompleted();
-//				playing.setGamestate(Gamestate.CREDITS);
+
 			}
 
 		quit.resetBools();
-		credit.resetBools();
+		
 	}
 
 	public void mousePressed(MouseEvent e) {
