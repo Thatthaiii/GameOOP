@@ -1,0 +1,10 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="javax.swing.JPanel"><rhs name\="main.GamePanel"/></lhs><lhs name\="javax.accessibility.Accessible"><rhs name\="main.GamePanel"/></lhs><lhs name\="javax.swing.JComponent"><rhs name\="main.GamePanel"/></lhs><lhs name\="javax.swing.TransferHandler$HasGetTransferHandler"><rhs name\="main.GamePanel"/></lhs><lhs name\="java.awt.Container"><rhs name\="main.GamePanel"/></lhs><lhs name\="java.awt.Component"><rhs name\="main.GamePanel"/></lhs><lhs name\="java.awt.image.ImageObserver"><rhs name\="main.GamePanel"/></lhs><lhs name\="java.awt.MenuContainer"><rhs name\="main.GamePanel"/></lhs><lhs name\="main.GamePanel"><rhs name\="main.GamePanel"/></lhs><lhs name\="java.util.EventListener"><rhs name\="input.KeyBoardInputs"/><rhs name\="input.MouseInputs"/></lhs><lhs name\="java.awt.event.KeyListener"><rhs name\="input.KeyBoardInputs"/></lhs><lhs name\="java.awt.event.MouseListener"><rhs name\="input.MouseInputs"/></lhs><lhs name\="java.awt.event.MouseMotionListener"><rhs name\="input.MouseInputs"/></lhs><lhs name\="java.awt.Paint"><rhs name\="java.awt.Color"/></lhs><lhs name\="java.awt.Transparency"><rhs name\="java.awt.Color"/></lhs><lhs name\="java.awt.Color"><rhs name\="java.awt.Color"/></lhs></history>
+content_assist_number_of_computers=12
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+org.eclipse.jdt.ui.formatterprofiles.version=22
+spelling_locale_initialized=true
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

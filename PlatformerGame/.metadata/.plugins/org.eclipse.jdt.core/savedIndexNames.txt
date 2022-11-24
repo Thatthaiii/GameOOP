@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\Computer User\eclipse-workspace\PlatformerGame\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+3959137331.index
+1067094681.index
