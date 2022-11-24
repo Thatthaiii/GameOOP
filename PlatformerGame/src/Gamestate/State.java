@@ -20,8 +20,6 @@ public class State {
 	}
 	@SuppressWarnings("incomplete-switch")
 	public void setGamestate(GameState state) {
-	
-
 		GameState.state = state;
 	}
 

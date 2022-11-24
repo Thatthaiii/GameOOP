@@ -82,7 +82,7 @@ public class EnemyManager {
 			if (c.isActive()) {
 				g.drawImage(FriesArr[c.getState()][c.getAniIndex()], (int) c.getHitbox().x - xLvlOffset - FRIES_DRAWOFFSET_X + c.flipX(), (int) c.getHitbox().y - FRIES_DRAWOFFSET_Y,
 						FRIES_WIDTH * c.flipW(), FRIES_HEIGHT, null);
-				c.drawHitbox(g, xLvlOffset);
+//				c.drawHitbox(g, xLvlOffset);
 //				c.drawAttackBox(g, xLvlOffset);
 
 			}
@@ -95,7 +95,7 @@ public class EnemyManager {
 				if (c.getState() != DEAD && c.getState() != HIT)
 					if (attackBox.intersects(c.getHitbox())) {
 						//set damage taken
-						c.hurt(10);
+						c.hurt(500);
 						return;
 					}
 
@@ -107,7 +107,7 @@ public class EnemyManager {
 					if (p.getState() != DEAD && p.getState() != HIT)
 						if (attackBox.intersects(p.getHitbox())) {
 							//set damage taken
-							p.hurt(10);
+							p.hurt(500);
 							return;
 						}
 				}
@@ -118,7 +118,7 @@ public class EnemyManager {
 				if (s.getState() != DEAD && s.getState() != HIT)
 					if (attackBox.intersects(s.getHitbox())) {
 						//set damage taken
-						s.hurt(10);
+						s.hurt(500);
 						return;
 					}
 			}

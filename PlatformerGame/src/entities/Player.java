@@ -27,7 +27,6 @@ import utilz.LoadSave;
 import static utilz.Constants.*;
 public class Player extends Entity {
 	private BufferedImage[][] animations;
-	
 	private boolean moving = false, attacking = false;
 	private boolean left, up, right, down, jump;
 	
@@ -152,8 +151,7 @@ public class Player extends Entity {
 			updatePos();
 
 		if (moving) {
-//			checkPotionTouched();
-//			checkSpikesTouched();
+
 			checkInsideWater();
 
 			tileY = (int) (hitbox.y / Game.TILES_SIZE);
@@ -223,7 +221,7 @@ public class Player extends Entity {
 
 	public void render(Graphics g, int lvlOffset) {
 		g.drawImage(animations[state][aniIndex], (int) (hitbox.x - xDrawOffset) - lvlOffset + flipX, (int) (hitbox.y - yDrawOffset + (int) (pushDrawOffset)), width * flipW, height, null);
-//		drawHitbox(g, lvlOffset);
+
 //		drawAttackBox(g, lvlOffset);
 		drawUI(g);
 	}
@@ -448,7 +446,6 @@ public class Player extends Entity {
 	private void checkInsideWater() {
 		if (IsEntityInWater(hitbox, playing.getLevelManager().getCurrentLevel().getLevelData()))
 			currentHealth = 0;
-
 	}
 
 

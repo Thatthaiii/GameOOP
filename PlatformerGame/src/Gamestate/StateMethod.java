@@ -7,8 +7,6 @@ import java.awt.event.MouseEvent;
 public interface StateMethod {
 	public void update();
 	
-
-	
 	public void draw(Graphics g);
 	
 	public void mouseClicked(MouseEvent e);

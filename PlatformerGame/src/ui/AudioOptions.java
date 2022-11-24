@@ -7,17 +7,20 @@ import static utilz.Constants.UI.VolumeButtons.VOLUME_HEIGHT;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 
-import Gamestate.GameState;
+
 import main.Game;
 
 public class AudioOptions {
 	private volumeButton volumeButton;
 	private SoundButton soundButton;
 	private SongButton musicButton;
-	public AudioOptions() {
+	private Game game;
+	public AudioOptions(Game game) {
+		this.game = game;
 		createSoundButtons();
 		createVolumeButtons();
 	}
+
 	private void createVolumeButtons() {
 		int vX = (int)(309*Game.SCALE);
 		int vY = (int)(235*Game.SCALE);

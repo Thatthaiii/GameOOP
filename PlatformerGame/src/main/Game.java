@@ -5,7 +5,7 @@ import java.awt.Graphics;
 import Gamestate.GameOptions;
 import Gamestate.GameState;
 import Gamestate.playing;
-
+import utilz.LoadSave;
 import ui.AudioOptions;
 
 import Gamestate.menu;
@@ -41,6 +41,7 @@ public class Game implements Runnable{
 	}
 	
 	private void initClasses() {
+		audioOptions = new AudioOptions(this);
 		menu = new menu(this);
 		playing = new playing(this);
 		gameOptions = new GameOptions(this);
@@ -87,7 +88,6 @@ public class Game implements Runnable{
 	
 	@Override
 	public void run() {
-
 		double timePerFrame = 1000000000.0 / FPS_SET;
 		double timePerUpdate = 1000000000.0 / UPS_SET;
 

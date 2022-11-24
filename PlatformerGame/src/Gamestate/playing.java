@@ -6,7 +6,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.geom.Rectangle2D;
 
-
+import utilz.LoadSave;
 import Levels.LevelManager;
 
 
@@ -27,7 +27,7 @@ public class playing extends State implements StateMethod{
 	private int maxLvlOffsetX;
 
 
-
+	
 	private LevelManager levelManager;
 	private EnemyManager enemyManager;
 	private PauseOverlay pauseOverlay;
@@ -52,10 +52,7 @@ public class playing extends State implements StateMethod{
 	public playing(Game game) {
 		super(game);
 		initClasses();
-		
-
 		calcLvlOffset();
-		
 		loadStartLevel();
 		
 
@@ -112,8 +109,6 @@ public class playing extends State implements StateMethod{
 		}else if (playerDying) {
 			player.update();
 		}else {
-			
-
 			levelManager.update();
 
 			player.update();

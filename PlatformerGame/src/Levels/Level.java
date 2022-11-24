@@ -28,11 +28,6 @@ public class Level {
 	private ArrayList<Fries> fries = new ArrayList<>();
 	private ArrayList<Donut> donuts = new ArrayList<>();
 	private ArrayList<Burger> burgers = new ArrayList<>();
-//	private ArrayList<Potion> potions = new ArrayList<>();
-//	private ArrayList<Spike> spikes = new ArrayList<>();
-//	private ArrayList<GameContainer> containers = new ArrayList<>();
-//	private ArrayList<Cannon> cannons = new ArrayList<>();
-//	private ArrayList<BackgroundTree> trees = new ArrayList<>();
 	private ArrayList<Grass> grass = new ArrayList<>();
 
 	private int lvlTilesWide;
@@ -91,15 +86,7 @@ public class Level {
 		}
 	}
 
-//	private void loadObjects(int blueValue, int x, int y) {
-//		switch (blueValue) {
-//		case RED_POTION, BLUE_POTION -> potions.add(new Potion(x * Game.TILES_SIZE, y * Game.TILES_SIZE, blueValue));
-//		case BOX, BARREL -> containers.add(new GameContainer(x * Game.TILES_SIZE, y * Game.TILES_SIZE, blueValue));
-//		case SPIKE -> spikes.add(new Spike(x * Game.TILES_SIZE, y * Game.TILES_SIZE, SPIKE));
-//		case CANNON_LEFT, CANNON_RIGHT -> cannons.add(new Cannon(x * Game.TILES_SIZE, y * Game.TILES_SIZE, blueValue));
-//		case TREE_ONE, TREE_TWO, TREE_THREE -> trees.add(new BackgroundTree(x * Game.TILES_SIZE, y * Game.TILES_SIZE, blueValue));
-//		}
-//	}
+
 
 	private void calcLvlOffsets() {
 		lvlTilesWide = img.getWidth();
