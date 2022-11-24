@@ -52,37 +52,21 @@ public class Game implements Runnable{
 		gameThread.start();
 	}
 	public void update() {
-		switch(GameState.state) {
-		case MENU:
-			menu.update();
-			break;
-		case PLAYING:
-			playing.update();
-			break;
-		case OPTIONS:
-			gameOptions.update();
-			break;
-		case QUIT:
-			
-		default:
-			System.exit(0);
-			break;
-			
+		switch (GameState.state) {
+		case MENU -> menu.update();
+		case PLAYING -> playing.update();
+		case OPTIONS -> gameOptions.update();
+		case QUIT -> System.exit(0);
 		}
 	}
+	
+	@SuppressWarnings("incomplete-switch")
 	public void render(Graphics g) {
 		switch (GameState.state) {
-		case MENU:
-			menu.draw(g);
-			break;
-		case PLAYING:
-			playing.draw(g);
-			break;
-		case OPTIONS:
-			gameOptions.draw(g);
-			break;
-		default:
-			break;
+		case MENU -> menu.draw(g);
+		case PLAYING -> playing.draw(g);
+		case OPTIONS -> gameOptions.draw(g);
+
 		}
 	}
 	

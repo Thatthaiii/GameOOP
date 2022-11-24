@@ -13,7 +13,7 @@ import utilz.LoadSave;
 public class GameCompletedOverlay {
 	private playing playing;
 	private BufferedImage img;
-	private MenuButton quit, credit;
+	private MenuButton quit;
 	private int imgX, imgY, imgW, imgH;
 
 	public GameCompletedOverlay(playing playing) {
@@ -23,7 +23,7 @@ public class GameCompletedOverlay {
 	}
 
 	private void createButtons() {
-		quit = new MenuButton(Game.GAME_WIDTH / 2, (int) (270 * Game.SCALE), 2, GameState.MENU);
+		quit = new MenuButton((Game.GAME_WIDTH / 2)+10, (int) (225 * Game.SCALE), 2, GameState.MENU);
 
 	}
 
@@ -42,12 +42,12 @@ public class GameCompletedOverlay {
 
 		g.drawImage(img, imgX, imgY, imgW, imgH, null);
 
-		
+
 		quit.draw(g);
 	}
 
 	public void update() {
-		credit.update();
+
 		quit.update();
 	}
 
@@ -56,38 +56,31 @@ public class GameCompletedOverlay {
 	}
 
 	public void mouseMoved(MouseEvent e) {
-		credit.setMouseOver(false);
+
 		quit.setMouseOver(false);
 
 		if (isIn(quit, e))
 			quit.setMouseOver(true);
-		else if (isIn(credit, e))
-			credit.setMouseOver(true);
-	}
 
+	}
 	public void mouseReleased(MouseEvent e) {
 		if (isIn(quit, e)) {
 			if (quit.isMousePressed()) {
 				playing.resetAll();
 				playing.resetGameCompleted();
 				playing.setGamestate(GameState.MENU);
-
 			}
-		} else if (isIn(credit, e))
-			if (credit.isMousePressed()) {
-				playing.resetAll();
-				playing.resetGameCompleted();
-
-			}
+		}
 
 		quit.resetBools();
 		
 	}
 
+
 	public void mousePressed(MouseEvent e) {
-		if (isIn(quit, e))
+		if (isIn(quit, e)) {
 			quit.setMousePressed(true);
-		else if (isIn(credit, e))
-			credit.setMousePressed(true);
+		}
+
 	}
 }
