@@ -95,7 +95,7 @@ public class EnemyManager {
 				if (c.getState() != DEAD && c.getState() != HIT)
 					if (attackBox.intersects(c.getHitbox())) {
 						//set damage taken
-						c.hurt(500);
+						c.hurt(5);
 						return;
 					}
 
@@ -107,7 +107,7 @@ public class EnemyManager {
 					if (p.getState() != DEAD && p.getState() != HIT)
 						if (attackBox.intersects(p.getHitbox())) {
 							//set damage taken
-							p.hurt(500);
+							p.hurt(5);
 							return;
 						}
 				}
@@ -118,7 +118,7 @@ public class EnemyManager {
 				if (s.getState() != DEAD && s.getState() != HIT)
 					if (attackBox.intersects(s.getHitbox())) {
 						//set damage taken
-						s.hurt(500);
+						s.hurt(5);
 						return;
 					}
 			}
