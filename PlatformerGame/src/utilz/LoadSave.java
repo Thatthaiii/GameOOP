@@ -5,8 +5,11 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
@@ -44,6 +47,13 @@ public class LoadSave {
 	public static final String RAIN_PARTICLE = "rain_particle.png";
 	public static final String PISTOL_BULLETS = "pistol_bullet.png";
 	
+	public static final String LVL_ONE = "1.png";
+	public static final String LVL_TWO = "2.png";
+	public static final String LVL_THREE = "3.png";
+	public static final String LVL_FOUR = "4.png";
+	public static final String LVL_FIVE = "5.png";
+	public static final String LVL_SIX = "6.png";
+	
 	
 	public static BufferedImage GetSpriteAtlas(String fileName) {
 		BufferedImage img = null;
@@ -63,35 +73,24 @@ public class LoadSave {
 	}
 	
 	public static BufferedImage[] GetAllLevels() {
-		URL url = LoadSave.class.getResource("/lvls");
-		File file = null;
+		BufferedImage lvlOne = GetSpriteAtlas(LVL_ONE);
+		BufferedImage lvlTwo = GetSpriteAtlas(LVL_TWO);
+		BufferedImage lvlThree = GetSpriteAtlas(LVL_THREE);
+		BufferedImage lvlFour = GetSpriteAtlas(LVL_FOUR);
+		BufferedImage lvlFive = GetSpriteAtlas(LVL_FIVE);
+		BufferedImage lvlSix = GetSpriteAtlas(LVL_SIX);
 		
-		try {
-			file = new File(url.toURI());
-		} catch (URISyntaxException e) {
-			e.printStackTrace();
-		}
-		
-		File[] files = file.listFiles();
-		File[] filesSorted = new File[files.length];
-		
-		for(int i = 0; i < filesSorted.length; i++)
-			for(int j = 0; j < files.length ; j++) {
-				if(files[j].getName().equals((i + 1) + ".png"))
-					filesSorted[i] = files[j];
-				
-			}
-		BufferedImage[] imgs = new BufferedImage[filesSorted.length];
-		
-		for(int i =0; i < imgs.length ; i++) {
-			try {
-				imgs[i] = ImageIO.read(filesSorted[i]);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
+		BufferedImage[] imgs = new BufferedImage[6];
+		imgs[0] = lvlOne;
+		imgs[1] = lvlTwo;
+		imgs[2] = lvlThree;
+		imgs[3] = lvlFour;
+		imgs[4] = lvlFive;
+		imgs[5] = lvlSix;
 		return imgs;
 	}
+
+
 	
 
 	

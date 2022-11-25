@@ -1,6 +1,6 @@
 package Gamestate;
 
-import java.awt.Color;
+
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
@@ -14,7 +14,7 @@ import ui.MenuButton;
 public class menu extends State implements StateMethod{
 	
 	private MenuButton[] button  = new MenuButton[3];
-	private BufferedImage backgroundImg, backgroundImgPink;
+	private BufferedImage backgroundImg;
 	private int menuX, menuY, menuWidth, menuHeight;
 	
 	public menu(Game game) {
@@ -106,7 +106,7 @@ public class menu extends State implements StateMethod{
 
 	@Override
 	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
